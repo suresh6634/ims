@@ -9,6 +9,14 @@
  * http://www.codrops.com
  */
 {
+
+    function setMainDivHeight () {
+        var mainDivHeight = document.documentElement.scrollHeight - 20;
+        //alert(mainDivHeight);
+        document.getElementById("main__div").style.height = mainDivHeight+"px";
+    }
+
+    setMainDivHeight();
     // From https://davidwalsh.name/javascript-debounce-function.
 	function debounce(func, wait, immediate) {
 		var timeout;

@@ -175,7 +175,7 @@ main {
 }
 
 .content__title {
-	font-size: 3vw;
+	font-size: 3em;
 	margin: 0;
 	color: var(--color-title);
 	/*text-transform: lowercase;*/
@@ -192,6 +192,7 @@ main {
 	font-weight: 400;
 	margin: 0;
 	color: var(--color-subtitle);
+	padding: 20px;
 }
 
 .content__close {
@@ -313,6 +314,7 @@ main {
 	justify-content: center;
 	flex-wrap: wrap;
 	position: relative;
+	font-size:1.25em;
 }
 
 .menu__item:hover,
@@ -470,6 +472,7 @@ main {
 		z-index: 2;
 		font-size: 0.7em;
 		font-weight: 400;
+		right: 0;
 	}
 	.info {
 		position: absolute;
@@ -498,6 +501,8 @@ main {
 		margin-top: 12em;
 	}
 	.content__close {
-		top: 15em;
+		/* top: 15em; */
+		top: 10%;
+		left: 12%;
 	}
 }

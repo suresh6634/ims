@@ -65,7 +65,7 @@
 				<path d="M7.839 17.296a.847.847 0 0 0 1.21 0 .853.853 0 0 0 0-1.198L2.914 9.965h20.238A.843.843 0 0 0 24 9.118a.852.852 0 0 0-.847-.86H2.915l6.133-6.12a.868.868 0 0 0 0-1.21.847.847 0 0 0-1.21 0L.255 8.513a.833.833 0 0 0 0 1.197l7.585 7.586z" />
 			</symbol>
 		</svg>
-		<main>
+		<main id="main__div">
 			<div class="content content--fixed">
 				<header class="codrops-header">
 					<div class="codrops-header__title">
@@ -171,7 +171,7 @@
 					<p class="content__subtitle">
                         #Indian #Tamilian #MastersOfComputerApplications #ITDirector #15YrsofExperienceInIT #CertifiedPMPProjectManager
                         #AppleFanBoy #IntermediateTennisPlayer #CricketLover #MarvelFan #LoveToTalkPolitics #BasedInSingapore
-                        #WorkAholic #Married #FatherOfTwo #WebAppDeveloper #MobileAppDeveloper
+                        #WorkAholic #Married #FatherOfTwo #WebDesigner #WebAppDeveloper #MobileAppDeveloper
                     </p>
 				</div>
 				<div class="content__inner">
