@@ -69,7 +69,7 @@
 			<div class="content content--fixed">
 				<header class="codrops-header">
 					<div class="codrops-header__title">
-                        <img src="images/ims-logo.png" />
+                        <a href="/"><img src="images/ims-logo.png" /></a>
                     </div>
 				</header>
 			</div>

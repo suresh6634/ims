@@ -377,6 +377,7 @@ main {
 	align-self: start;
 	grid-area: header;
 	justify-self: start;
+
 }
 
 .codrops-header__title {
@@ -385,6 +386,7 @@ main {
 	padding: 0;
 	height: 64px;
 	width: 64px;
+    margin: 40px 0 0 30px;
 }
 
 .codrops-footer {
@@ -457,7 +459,6 @@ main {
 		padding-bottom: 0.25em;
 		font-size: 1.5em;
 		text-align: center;
-		background-image: transparent url("../images/ims-logo.png") no-repeat;
 	}
 	.codrops-footer {
 		position: relative;
