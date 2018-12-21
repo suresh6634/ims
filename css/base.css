@@ -380,10 +380,11 @@ main {
 }
 
 .codrops-header__title {
+	display:block;
 	margin: 0;
 	padding: 0;
-	font-weight: 900;
-	font-size: 2em;
+	height: 64px;
+	width: 64px;
 }
 
 .codrops-footer {
@@ -456,6 +457,7 @@ main {
 		padding-bottom: 0.25em;
 		font-size: 1.5em;
 		text-align: center;
+		background-image: transparent url("../images/ims-logo.png") no-repeat;
 	}
 	.codrops-footer {
 		position: relative;

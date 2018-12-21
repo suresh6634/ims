@@ -68,7 +68,9 @@
 		<main>
 			<div class="content content--fixed">
 				<header class="codrops-header">
-					<h1 class="codrops-header__title">Suresh Manickam</h1>
+					<div class="codrops-header__title">
+                        <img src="images/ims-logo.png" />
+                    </div>
 				</header>
 			</div>
 			<div class="content">
@@ -166,8 +168,10 @@
 			<div class="content content--reveal">
 				<div class="content__inner">
 					<h2 class="content__title">Who am I?</h2>
-					<p class="content__subtitle">#Indian #Tamilian #MastersOfComputerApplications #ITDirector #15YrsofExperienceInIT
-
+					<p class="content__subtitle">
+                        #Indian #Tamilian #MastersOfComputerApplications #ITDirector #15YrsofExperienceInIT #CertifiedPMPProjectManager
+                        #AppleFanBoy #IntermediateTennisPlayer #CricketLover #MarvelFan #LoveToTalkPolitics #BasedInSingapore
+                        #WorkAholic #Married #FatherOfTwo #WebAppDeveloper #MobileAppDeveloper
                     </p>
 				</div>
 				<div class="content__inner">
