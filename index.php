@@ -48,6 +48,9 @@
 
                 $('form').on('submit', function (e) {
 
+                    $(this).hide();
+                    $("#sending-animation").show();
+
                     e.preventDefault();
 
                     var request = $.ajax({
@@ -59,10 +62,8 @@
                                     }
                                   });
 
-
                     request.done(function( response ) {
                         result = JSON.parse(response);
-                        //alert(result.ok);
                         $( ".contact-response-message" ).html( result.reply ).show();
                     });
 
@@ -72,6 +73,8 @@
                 });
 
                 $('.show-contact').on('click', function (e) {
+                    $("#revert_back").show();
+                    $("sending-animation").hide();
                     $('form').trigger("reset");
                     $( ".contact-response-message" ).hide();
                     $(".contact-form").show();
@@ -234,6 +237,7 @@
                             <input type="text" name="mobile" id="Mobile" required="required" Placeholder="Mobile" />, please? <br/>
                             Thank you. <br/>
                             <input type="submit" value="Send to Suresh" id="revert_back" />
+                            <span id="sending-animation" style="display:none;"><img src="images/ims-loading.gif" alt="Sending..." /></span>
                         </p>
                         <p class="content__subtitle contact-response-message" style="text-align:left;line-height:2em;">
 
