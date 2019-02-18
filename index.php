@@ -48,7 +48,7 @@
 
                 $('form').on('submit', function (e) {
 
-                    $(this).hide();
+                    $("#revert_back").hide();
                     $("#sending-animation").show();
 
                     e.preventDefault();
@@ -57,15 +57,18 @@
                                     type: 'post',
                                     url: 'send-to-suresh.php',
                                     data: $('form').serialize(),
-                                    success: function () {
+                                    success: function ( response ) {
                                         $(".contact-form").hide();
+                                        $("#revert_back").show();
+                                        $("#sending-animation").hide();
+                                        result = JSON.parse(response);
+                                        $( ".contact-response-message" ).html( result.reply ).show();
                                     }
                                   });
 
-                    request.done(function( response ) {
-                        result = JSON.parse(response);
-                        $( ".contact-response-message" ).html( result.reply ).show();
-                    });
+                    /*request.done(function( response ) {
+
+                    });*/
 
                     request.fail(function( jqXHR, textStatus ) {
                         $( ".contact-response-message" ).html( "Request failed: " + textStatus ).show();
@@ -73,8 +76,6 @@
                 });
 
                 $('.show-contact').on('click', function (e) {
-                    $("#revert_back").show();
-                    $("sending-animation").hide();
                     $('form').trigger("reset");
                     $( ".contact-response-message" ).hide();
                     $(".contact-form").show();
