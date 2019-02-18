@@ -5,25 +5,25 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>I'm Suresh Manickam</title>
 
-		<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
-		<link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-		<link rel="manifest" href="images/favicon/manifest.json">
-		<meta name="msapplication-TileColor" content="#ffffff">
-		<meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
-		<meta name="theme-color" content="#ffffff">
-		<link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-		<link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="images/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
 
 		<meta name="description" content="I, M. Suresh" />
 		<meta name="keywords" content="suresh, manickam, tamilian, indian, project manager, PMP certified Project Manager, PMP certified" />
@@ -41,7 +41,45 @@
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-MGZ25R3');</script>
 		<!-- End Google Tag Manager -->
-	</head>
+
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+        <script>
+            $(function () {
+
+                $('form').on('submit', function (e) {
+
+                    e.preventDefault();
+
+                    var request = $.ajax({
+                                    type: 'post',
+                                    url: 'send-to-suresh.php',
+                                    data: $('form').serialize(),
+                                    success: function () {
+                                        $(".contact-form").hide();
+                                    }
+                                  });
+
+
+                    request.done(function( response ) {
+                        result = JSON.parse(response);
+                        //alert(result.ok);
+                        $( ".contact-response-message" ).html( result.reply ).show();
+                    });
+
+                    request.fail(function( jqXHR, textStatus ) {
+                        $( ".contact-response-message" ).html( "Request failed: " + textStatus ).show();
+                    });
+                });
+
+                $('.show-contact').on('click', function (e) {
+                    $('form').trigger("reset");
+                    $( ".contact-response-message" ).hide();
+                    $(".contact-form").show();
+                });
+
+            });
+        </script>
+    </head>
 	<body class="suresh">
 		<!-- Google Tag Manager (noscript) -->
 		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGZ25R3"
@@ -78,7 +116,7 @@
 					<a href="#" class="menu__item">Who&nbsp;am&nbsp;I?</a>
 					<a href="#" class="menu__item">What&nbsp;can&nbsp;I&nbsp;do?</a>
 					<!-- a href="#" class="menu__item">Where&nbsp;am&nbsp;I?</a -->
-					<a href="#" class="menu__item">How&nbsp;can&nbsp;I&nbsp;be&nbsp;reached?</a>
+					<a href="#" class="menu__item show-contact">How&nbsp;can&nbsp;I&nbsp;be&nbsp;reached?</a>
 					<!--a href="#" class="menu__item">Specimens</a>
 					<a href="#" class="menu__item">Projects</a -->
 				</nav>
@@ -169,14 +207,18 @@
 				<div class="content__inner">
 					<h2 class="content__title">Who am I?</h2>
 					<p class="content__subtitle">
-                        #Indian #Tamilian #MastersOfComputerApplications #ITDirector #15YrsofExperienceInIT #CertifiedPMPProjectManager
+                        #Indian #Tamilian #MastersOfComputerApplications #ITDirector #15+YrsofExperienceInIT #CertifiedPMPProjectManager
                         #AppleFanBoy #IntermediateTennisPlayer #CricketLover #MarvelFan #LoveToTalkPolitics #BasedInSingapore
                         #WorkAholic #Married #FatherOfTwo #WebDesigner #WebAppDeveloper #MobileAppDeveloper
                     </p>
 				</div>
 				<div class="content__inner">
 					<h2 class="content__title">What can I do?</h2>
-					<p class="content__subtitle">#AnyThingRelatedToIT</p>
+					<p class="content__subtitle">#ProjectManagement #SCRUMMeetings #SWOTAnalysis #BusinessAnalysis #GapAnalysis
+                        #ProcessAnalysis #PresentToGroup #PlanSprintCycle #RiskManagement #RootCauseAnalysis #WebDevelopment
+                        #TeamLeadership #Agile #WaterFall #StakeHolderManagement #WebDevelopment
+                        #WebDesign #StrongOfficeSkills
+                    </p>
 				</div>
 				<!--div class="content__inner">
 					<h2 class="content__title">Where am I?</h2>
@@ -184,7 +226,19 @@
 				</div-->
 				<div class="content__inner">
 					<h2 class="content__title">How can I be reached?</h2>
-					<p class="content__subtitle">Just email me: me@imsuresh.com</p>
+					<form action="#" method="post">
+                        <p class="content__subtitle contact-form" style="text-align:left;line-height:2em;">
+                            Hi Suresh, <br/>
+                            I'm <input type="text" name="name" required="required" id="name" Placeholder="John Doe" style="color:#FFF;" />. I have something to discuss with you.
+                            Can you get back to me at my <input type="email" required="required" name="email" id="email" Placeholder="Email" /> or
+                            <input type="text" name="mobile" id="Mobile" required="required" Placeholder="Mobile" />, please? <br/>
+                            Thank you. <br/>
+                            <input type="submit" value="Send to Suresh" id="revert_back" />
+                        </p>
+                        <p class="content__subtitle contact-response-message" style="text-align:left;line-height:2em;">
+
+                        </p>
+                    </form>
 				</div>
 				<!--div class="content__inner">
 					<h2 class="content__title">Specimens</h2>

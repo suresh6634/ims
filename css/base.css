@@ -437,6 +437,31 @@ main {
 	padding: 0.25em;
 }
 
+.content__inner form input[type=text], .content__inner form input[type=email] {
+	width: 175px;
+	padding: 0 2px;
+	margin: 0 2px;
+	box-sizing: border-box;
+	display: inline;
+	background: none;
+	border: 0;
+	border-bottom:1px solid #FFF;
+	font-size:1em;
+	color: #FFF;
+	outline: none;
+}
+
+.content__inner form input[type=submit] {
+	background: #EFEFEF;
+	padding: 8px;
+	margin: 15px 0 0 0;
+}
+
+.content__inner form input[type=submit]:hover {
+	background: #FFF;
+	color: #555;
+}
+
 @media screen and (max-width: 55em) {
 	.message {
 		display: block;
