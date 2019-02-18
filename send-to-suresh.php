@@ -12,22 +12,27 @@ $request["mobile"] = $_POST["mobile"];
 
 $name = $_POST["name"];
 $email = $_POST["email"];
-
+$mobile = $_POST["mobile"];
 date_default_timezone_set('Asia/Singapore');
 
 $toAddress = $email; //To whom you are sending the mail.
-/*$message   = <<<EOT
+$message   = <<<EOT
     <html>
        <body>
-          <h>PHPMailer basic usage</h>
-          <p>It is working</p>
+          <p>Hi Suresh, <br/>
+             I'm $name, I would like to discuss with you something important. <br/>
+             Can you kindly get back to me via $email or $mobile.
+          </p>
+          <p>Cheers <br/>
+          $name.
+          </p>
        </body>
     </html>
-EOT;*/
-$message = "test";
+EOT;
+//$message = "test";
 $mail = new PHPMailer(true);
 $mail->isSMTP();
-$mail->SMTPDebug = 2;
+//$mail->SMTPDebug = 2;
 $mail->SMTPAuth    = true;
 $mail->Host        = "smtp.zoho.com";
 $mail->Port        = 465;
@@ -43,7 +48,7 @@ $mail->isHTML(true);
 $mail->Username = "me@imsuresh.com"; // your gmail address
 $mail->Password = "Tom79Cat]Jery"; // password
 $mail->setFrom("me@imsuresh.com", "Suresh Manickam");
-$mail->Subject = "Using PHPMailer without composer"; // Mail subject
+$mail->Subject = "$name messaged you!"; // Mail subject
 $mail->Body    = $message;
 $mail->addAddress($toAddress, "Suresh Manickam");
 //$mail->send();
