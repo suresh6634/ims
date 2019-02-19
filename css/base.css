@@ -462,6 +462,21 @@ main {
 	color: #555;
 }
 
+.content__inner form select {
+	outline: none;
+	border: 0;
+	border-bottom:1px solid #FFF;
+	font-size: 1em;
+	display:inline;
+	box-sizing: border-box;
+	margin: 0 2px 0 0;
+	padding: 0;
+	background: none;
+	resize: none;
+	color: #FFF;
+}
+
+
 @media screen and (max-width: 55em) {
 	.message {
 		display: block;

@@ -229,12 +229,22 @@
 					<h3 class="content__subtitle">The dimwitted purchase can't fasten the poem.</h3>
 				</div-->
 				<div class="content__inner">
-					<h2 class="content__title">How can I be reached?</h2>
+					<h2 class="content__title">Message me!</h2>
 					<form action="#" method="post">
                         <p class="content__subtitle contact-form" style="text-align:left;line-height:2em;">
                             Hi Suresh, <br/>
-                            I'm <input type="text" name="name" required="required" id="name" Placeholder="John Doe" style="color:#FFF;" />. I have something to discuss with you.
-                            Can you get back to me at my <input type="email" required="required" name="email" id="email" Placeholder="Email" /> or
+                            I'm <input type="text" name="name" required="required" id="name" Placeholder="John Doe" style="color:#FFF;" />.
+                            <br/>I just wanna
+                            <select name="about" required="required">
+                                <option value="0">...?</option>
+                                <option value="1">say hi!</option>
+                                <option value="2">discuss something about IT!</option>
+                                <option value="3">refresh your memory about me!</option>
+                                <option value="4">tell you a gossip!</option>
+                                <option value="5">pock you!</option>
+                                <option value="6">mention it's NOTA and revert ASAP!</option>
+                            </select>.
+                            <br/>Can you get back to me at my <input type="email" required="required" name="email" id="email" Placeholder="Email" /> or
                             <input type="text" name="mobile" id="Mobile" required="required" Placeholder="Mobile" />, please? <br/>
                             Thank you. <br/>
                             <input type="submit" value="Send to Suresh" id="revert_back" />
